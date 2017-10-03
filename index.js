@@ -131,5 +131,5 @@ function renderLegend(name, color) {
   `
 }
 
-app.route('/', main)
+app.route('*', main)
 app.mount('div')
