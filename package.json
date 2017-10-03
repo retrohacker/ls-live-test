@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "budo index.js:bundle.js -p 3000 --no-debug -- -b bundle-collapser/plugin -g yo-yoify -g uglifyify",
+    "start": "budo index.js:bundle.js -p 3000 --no-debug -P -- -b bundle-collapser/plugin -g yo-yoify -g uglifyify",
     "build": "browserify index.js -o bundle.js -g yo-yoify -g uglifyify"
   },
   "dependencies": {
