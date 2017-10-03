@@ -49,7 +49,7 @@ var main = function main(state, emit) {
       "></div>
 
       <h3>Description</h3>
-      To change the simulation in realtime, update the values under config.<br>
+      To change the simulation in realtime, update the values under config.<br><br>
       The configuration values are:
       <ul>
         <li>Limit: When load shedding will kick in</li>
@@ -58,6 +58,14 @@ var main = function main(state, emit) {
         <li>HalfLife: <a href="http://github.com/reactivesocket/ewma">EWMA half life</a></li>
         <li>Graph time window: How many ms worth of data do you want to render?</li>
         <li>CPU Generator: We use Math.random() to immitate the check for average cpu utilization, this sets the lower and upper limit you would like the average cpu utilization to return. You can use this to simulate spikes in CPU.</li>
+      </ul><br>
+      The legend values are:
+      <ul>
+        <li>Limit: The value of the limit config at the time of the reading</li>
+        <li>Max: The value of the max config value at the time of the reading</li>
+        <li>CPU: The value from the CPU Generator</li>
+        <li>EWMA: The EWMA updated with the new CPU value</li>
+        <li>Reject: The % of traffic being rejected</li>
       </ul>
     </div>
   `

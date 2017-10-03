@@ -54,7 +54,7 @@ function convertTimes(pluginData) {
       max: v.max,
       cpu: v.cpu,
       ewma: v.ewma,
-      reject: v.reject < 0 ? 0 : v.reject,
+      reject: v.reject < 0 ? 0 : (v.reject > 1 ? 1 : v.reject),
       time: (now - v.time) / module.exports.timeWindow
     }})
 }
